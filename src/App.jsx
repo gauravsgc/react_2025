@@ -5,7 +5,7 @@ import './App.css'
 import Nav from './components/Nav';
 import Center from './components/center'
 import Footer from './components/Footer';
-
+import background from './assets/background.jpg'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -15,12 +15,18 @@ function App() {
 
     <div className='header'>
   <Nav/>
+  {/* <img src={background} alt="" /> */}
    </div>
    
    <div className='center'>
-    <div className="item1"><Center/></div>
-    <div className="item2"><Center/></div>
-    <div className="item3"><Center/></div>
+
+    <div className="item1"><Center topic='react js' fees='10k' value='Pay now' imgpath={background}/></div>
+
+    <div className="item2"><Center topic='angular js'
+    fees='20k' value='learn free' imgpath={background}/></div>
+
+    <div className="item3"><Center topic='next js'
+    fees='30k' value='Pay us' imgpath={background}/></div>
 
    </div> 
 <div className="footer" style={{marginTop:'20px'}}>
