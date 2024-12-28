@@ -1,7 +1,8 @@
 import React from 'react'
 import style from './Style/center-style.module.css'
-const Center = ({topic,fees,value,imgpath}) => {
-  console.log(imgpath);//objectprops={topic:''}
+
+const Center = ({topic,fees,value,imgpath}) => {//imgpath
+  // console.log(imgpath);//objectprops={topic:''}
   // const {topic,fees}=props;//object destructuring
   return (
     <div className={style.midsection}>

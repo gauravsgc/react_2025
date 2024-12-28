@@ -5,10 +5,12 @@ import './App.css'
 import Nav from './components/Nav';
 import Center from './components/center'
 import Footer from './components/Footer';
-import background from './assets/background.jpg'
-
+// import background from './assets/background.jpg'
+import Data from './Data.json';
 function App() {
   const [count, setCount] = useState(0)
+console.log(Data);
+
 
   return (
     <>
@@ -19,16 +21,32 @@ function App() {
    </div>
    
    <div className='center'>
+{Data.map((e,index)=>
+  <div key={index}>
+  {/* {e.topic}
+  {e.fees}
+  {e.value} */}
+  <Center topic={e.topic} fees={e.fees} value={e.value} imgpath={e.imgpath}/>
+  </div>
+)}
 
-    <div className="item1"><Center topic='react js' fees='10k' value='Pay now' imgpath={background}/></div>
+{/* 
+    <div className="item1">
+      <Center topic='react js' fees='10k' value='Pay now' imgpath={background}/>
+      </div>
 
-    <div className="item2"><Center topic='angular js'
-    fees='20k' value='learn free' imgpath={background}/></div>
+    <div className="item2">
+      <Center topic='angular js'
+    fees='20k' value='learn free' imgpath={background}/>
+    </div>
 
-    <div className="item3"><Center topic='next js'
-    fees='30k' value='Pay us' imgpath={background}/></div>
+    <div className="item3">
+      <Center topic='next js'
+    fees='30k' value='Pay us' imgpath={background}/>
+    </div> */}
 
    </div> 
+   <img src="./assets/background.jpg" alt="" />
 <div className="footer" style={{marginTop:'20px'}}>
   <Footer/>
 </div>
