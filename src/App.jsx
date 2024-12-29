@@ -6,7 +6,8 @@ import Nav from './components/Nav';
 import Center from './components/center'
 import Footer from './components/Footer';
 // import background from './assets/background.jpg'
-import Data from './Data.json';
+// import Data from './Data.json';
+import Data from './Data.js';
 function App() {
   const [count, setCount] = useState(0)
 console.log(Data);
@@ -21,12 +22,13 @@ console.log(Data);
    </div>
    
    <div className='center'>
-{Data.map((e,index)=>
-  <div key={index}>
+  {/* map method in js */}
+ {Data.map((e,index)=>
+  <div key={index}> 
   {/* {e.topic}
   {e.fees}
   {e.value} */}
-  <Center topic={e.topic} fees={e.fees} value={e.value} imgpath={e.imgpath}/>
+ <Center topic={e.topic} fees={e.fees} value={e.value} imgpath={e.imgpath}/>
   </div>
 )}
 

@@ -5,7 +5,8 @@ const Center = ({topic,fees,value,imgpath}) => {//imgpath
   // console.log(imgpath);//objectprops={topic:''}
   // const {topic,fees}=props;//object destructuring
   return (
-    <div className={style.midsection}>
+    <div >
+      
       <h1>{topic}</h1>
       <p>price:{fees}</p>
       <button className={style.btn}>{value}</button>
