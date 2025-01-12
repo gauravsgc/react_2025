@@ -8,6 +8,9 @@ import Footer from './components/Footer';
 // import background from './assets/background.jpg'
 // import Data from './Data.json';
 import Data from './Data.js';
+import Table from './components/TableData.jsx';
+import TableData from './components/TableData.jsx';
+import Myslider from './components/MYslider.jsx';
 function App() {
   const [count, setCount] = useState(0)
 console.log(Data);
@@ -17,7 +20,8 @@ console.log(Data);
     <>
 
     <div className='header'>
-  <Nav/>
+  {/* <Nav/> */}
+  <Myslider/>
   {/* <img src={background} alt="" /> */}
    </div>
    
@@ -49,6 +53,9 @@ console.log(Data);
 
    </div> 
    <img src="./assets/background.jpg" alt="" />
+   <div>
+    <TableData/>
+   </div>
 <div className="footer" style={{marginTop:'20px'}}>
   <Footer/>
 </div>
